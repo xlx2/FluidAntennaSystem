@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from utils.utils import dB2pow
 from LA_FAS.consts import Parameters
-from system import FAS_System, MIMO_System
+from LA_FAS.system import FAS_System, MIMO_System
 import time
 
 

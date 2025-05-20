@@ -7,7 +7,7 @@ from utils.utils import *
 from utils.math import *
 
 
-class FluidAntennaSystem:
+class Fluid_Antenna_System:
     def __init__(self, **parameters):
         for key, value in parameters.items():
             setattr(self, key, value)

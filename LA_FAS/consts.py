@@ -1,7 +1,7 @@
 from utils.math import dBm2pow, dB2pow
-from Channel.fas import FAS_channel
+from Channel.fas import FAS_Channel
 import numpy as np
-np.random.seed(10)  # fix the random parameters
+# np.random.seed(10)  # fix the random parameters
 
 
 # --------------------- System Parameters ----------------------
@@ -29,7 +29,7 @@ STEERING_VECTOR = np.exp(1j * 2 * np.pi * antenna_indices * SPACING * np.sin(DOA
 STEERING_VECTOR_DIFF = 1j * 2 * np.pi * antenna_indices * SPACING * np.cos(DOA) * STEERING_VECTOR
 
 # --------------------- Channel --------------------------------
-fas = FAS_channel(Ny=NUM_OF_ANTENNAS, N_user=NUM_OF_USERS, Wx=W, Wy=W)
+fas = FAS_Channel(Ny=NUM_OF_ANTENNAS, N_user=NUM_OF_USERS, Wx=W, Wy=W)
 CHANNEL= fas.get_channel()
 
 # --------------------- Parameters ----------------------

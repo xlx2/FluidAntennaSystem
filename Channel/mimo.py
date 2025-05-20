@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class MIMO_channel:
+class MIMO_Channel:
     def __init__(self, N: int, N_user: int):
         self.N = N
         self.N_user = N_user

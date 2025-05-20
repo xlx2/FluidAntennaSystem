@@ -1,7 +1,7 @@
 from utils.math import dBm2pow, dB2pow
 import numpy as np
-from Channel.mimo import MIMO_channel
-np.random.seed(10)  # fix the random parameters
+from Channel.mimo import MIMO_Channel
+# np.random.seed(10)  # fix the random parameters
 
 
 # --------------------- System Parameters ----------------------
@@ -27,7 +27,7 @@ STEERING_VECTOR = np.exp(1j * 2 * np.pi * antenna_indices * SPACING * np.sin(DOA
 STEERING_VECTOR_DIFF = 1j * 2 * np.pi * antenna_indices * SPACING * np.cos(DOA) * STEERING_VECTOR
 
 # --------------------- Channel --------------------------------
-CHANNEL= MIMO_channel(N=NUM_OF_ANTENNAS, N_user=NUM_OF_USERS).get_channel()
+CHANNEL= MIMO_Channel(N=NUM_OF_ANTENNAS, N_user=NUM_OF_USERS).get_channel()
 
 # --------------------- Parameters ----------------------
 Parameters = {

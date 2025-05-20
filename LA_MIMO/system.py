@@ -3,7 +3,7 @@ import cvxpy as cp
 from utils.utils import calculate_crb
 
 
-class MIMO_system:
+class MIMO_System:
     def __init__(self, **parameters):
         for key, value in parameters.items():
             setattr(self, key, value)

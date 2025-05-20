@@ -3,7 +3,7 @@ from utils.math import dB2pow
 from scipy.special import j0
 
 
-class FAS_channel:
+class FAS_Channel:
     def __init__(self, Ny: int, N_user: int, Nx: int=1, sigma2=dB2pow(0), Wx=1, Wy=1):
         self.Nx = Nx
         self.Ny = Ny

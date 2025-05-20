@@ -2,7 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from utils.math import dBm2pow
 from LA_FAS.consts import Parameters
-from system import FAS_System
+fas_parameters = Parameters.copy()
+from LA_MIMO.consts import Parameters
+mimo_parameters = Parameters.copy()
+from LA_FAS.system import Fluid_Antenna_System
+from LA_MIMO.system import MIMO_System
 import time
 
 
@@ -13,7 +17,7 @@ for P_dBm in range(30, 42, 2):
     t_start = time.time()
     print(f'Current P: {P_dBm}(dBm)')
     Parameters['power'] = dBm2pow(P_dBm)
-    crb_fas = FAS_System(Parameters).run(verbose=False)
+    _, crb_fas = Fluid_Antenna_System(Parameters).run(verbose=False)
     objval_fas.append(crb_fas)
     crb_mimo = MIMO_System(Parameters).run(verbose=False)
     objval_mimo.append(crb_mimo)
