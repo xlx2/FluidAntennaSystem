@@ -35,6 +35,7 @@ plt.xlabel('Power Budget (dBm)')
 plt.ylabel(r'Root CRB of DoA estimation $(\theta°)$')
 plt.legend(loc='best')
 
-# 保存 PDF
+# 保存 图片
+plt.savefig('figs/CRB_Power.png', format='png', dpi=300)
 plt.savefig('figs/CRB_Power.eps', format='eps')
 plt.show()
