@@ -3,7 +3,6 @@ import numpy as np
 from Channel.mimo import MIMO_Channel
 # np.random.seed(10)  # fix the random parameters
 
-
 # --------------------- System Parameters ----------------------
 NUM_OF_USERS = 3  # Communication user number
 NUM_OF_ANTENNAS = 8  # Transmit antenna number

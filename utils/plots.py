@@ -12,8 +12,8 @@ plt.rcParams.update({
     "xtick.labelsize": 12,
     "ytick.labelsize": 12,
     "legend.fontsize": 12,
-    "lines.linewidth": 2.5,
-    "lines.markersize": 10,
+    "lines.linewidth": 2,
+    "lines.markersize": 5,
 })
 
 

@@ -3,12 +3,11 @@ from Channel.fas import FAS_Channel
 import numpy as np
 # np.random.seed(10)  # fix the random parameters
 
-
 # --------------------- System Parameters ----------------------
 NUM_OF_USERS = 3  # Communication user number
 NUM_OF_ANTENNAS = 16  # Antenna number
 NUM_OF_SELECTED_ANTENNAS = 8  # Selected antenna number
-W = 4  # Total length of antennas (Lambda/per)
+W = 7.5  # Total length of antennas (Lambda/per)
 FRAME_LENGTH = 30  # ISAC signal frame length
 
 # --------------------- Power Parameters -----------------------
