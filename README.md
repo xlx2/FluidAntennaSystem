@@ -8,4 +8,4 @@ pip install -r requirements.txt
 `
 
 ## Experiments
-<img src="./figs/CRB_Power.png" width="500" height="300">
+<img src="./figs/CRB_Power.png" width="500">
