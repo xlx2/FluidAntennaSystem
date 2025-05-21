@@ -67,9 +67,9 @@ def calculate_crb(sigmaR2, rc, L, Rx, a, a_diff):
 
     crb_values = np.zeros(M)
     for m in range(M):
-        norm_a_diff = np.real(np.trace(a_diff[:, m:m+1] @ a_diff[:, m:m+1].T.conj()))
-        norm_b_diag_W = np.real(np.trace(Rx @ a[:, m:m+1] @ a[:, m:m+1].T.conj()))
-        crb_values[m] = np.rad2deg(1 / (2 * SNR_r * norm_a_diff * norm_b_diag_W))
+        norm_a_diff = np.real(a_diff[:, m:m+1].T.conj() @ a_diff[:, m:m+1])
+        norm_b_diag_W = np.real(a[:, m:m+1].T.conj() @ Rx @ a[:, m:m+1])
+        crb_values[m] = 1 / (2 * SNR_r * norm_a_diff * norm_b_diag_W)
 
-    return np.sqrt(np.mean(crb_values**2))
+    return np.rad2deg(np.sqrt(np.mean(crb_values**2)))
 

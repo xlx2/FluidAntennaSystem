@@ -18,7 +18,7 @@ plt.rcParams.update({
 
 
 def ula_beampattern(N:int , type:str, Rx: Optional[np.ndarray]=None, spacing: float = 0.5,
-                    isNormalized:bool=False, save_path: Optional[str]=None):
+                    isNormalized:bool=False, save_dir_path: Optional[str]=None):
     """
     Draw the beampatterning plot.
     :param N: Number of antennas
@@ -50,12 +50,13 @@ def ula_beampattern(N:int , type:str, Rx: Optional[np.ndarray]=None, spacing: fl
     plt.legend(loc='best', frameon=True)
     plt.tight_layout()
     plt.grid(True)
-    if save_path is not None:
-        plt.savefig(save_path, format="eps")
+    if save_dir_path is not None:
+        plt.savefig(save_dir_path + f'ula_beampattern.png', format="png", dpi=300)
+        plt.savefig(save_dir_path + f'ula_beampattern.eps', format="eps")
     plt.show()
 
 def upa_beampattern(Nx:int, Ny:int, Rx: Optional[np.ndarray]=None, spacing:float=0.5, 
-                    isNormalized:bool=False, save_path: Optional[str]=None):
+                    isNormalized:bool=False, save_dir_path: Optional[str]=None):
     """
     Draw the beampatterning plot.
     :param Nx: Number of transmitters in the x-direction.
@@ -93,6 +94,7 @@ def upa_beampattern(Nx:int, Ny:int, Rx: Optional[np.ndarray]=None, spacing:float
     plt.grid(True)
     plt.tight_layout()
     ax.view_init(elev=30, azim=45)
-    if save_path is not None:
-        plt.savefig(save_path, format="eps")
+    if save_dir_path is not None:
+        plt.savefig(save_dir_path + f'upa_beampattern.png', format="png", dpi=300)
+        plt.savefig(save_dir_path + f'upa_beampattern.eps', format="eps")
     plt.show()

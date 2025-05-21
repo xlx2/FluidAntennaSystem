@@ -7,7 +7,7 @@ import numpy as np
 NUM_OF_USERS = 3  # Communication user number
 NUM_OF_ANTENNAS = 16  # Antenna number
 NUM_OF_SELECTED_ANTENNAS = 8  # Selected antenna number
-W = 7.5  # Total length of antennas (Lambda/per)
+W = 8  # Total length of antennas (Lambda/per)
 FRAME_LENGTH = 30  # ISAC signal frame length
 
 # --------------------- Power Parameters -----------------------

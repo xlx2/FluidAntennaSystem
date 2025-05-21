@@ -8,7 +8,7 @@ mimo_parameters = Parameters.copy()
 from LA_FAS.system import Fluid_Antenna_System
 from LA_MIMO.system import MIMO_System
 import time
-np.random.seed(10)  # fix the random parameters
+# np.random.seed(10)  # fix the random parameters
 
 
 objval_fas = []
@@ -29,7 +29,7 @@ for P_dBm in power_range:
 # 绘图
 plt.figure()
 plt.plot(power_range, objval_fas, 'b-s', linewidth=1.5, label='Fluid Antenna')
-plt.plot(power_range, objval_mimo, 'r-o', linewidth=1.5, label='MIMO')
+plt.plot(power_range, objval_mimo, 'r-o', linewidth=1.5, label='Traditional MIMO')
 plt.grid(True)
 plt.xlabel('Power Budget (dBm)')
 plt.ylabel(r'Root CRB of DoA estimation $(\theta°)$')

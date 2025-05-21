@@ -201,7 +201,7 @@ class Fluid_Antenna_System:
                 self.crb_list.append(crb)
                 
                 W_old, lambda_old = W_new, lambda_new
-                if iter > 0 and abs((self.crb_list[iter] - self.crb_list[iter-1]) / self.crb_list[iter]) < 1e-3:
+                if iter > 0 and abs((self.crb_list[iter] - self.crb_list[iter-1]) / self.crb_list[iter]) < 1e-4:
                     print(f"\nConverged at iteration {iter}.")
                     break
                 pbar.set_postfix({"crb": f"{self.crb_list[-1]:.4e}"})
