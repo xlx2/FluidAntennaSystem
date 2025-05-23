@@ -13,7 +13,7 @@ FRAME_LENGTH = 10  # ISAC signal frame length
 POWER = dBm2pow(30)  # Transmit power 
 CHANNEL_NOISE = dB2pow(-30)  # Communication noise power
 SENSING_NOISE = dB2pow(-30)  # Radar sensing noise power
-QOS_THRESHOLD = dB2pow(10)  # QoS threshold
+QOS_THRESHOLD = dB2pow(12)  # QoS threshold
 REFLECTION_COEFFICIENT = dB2pow(-30) # Reflection coefficient
 
 # --------------------- Targets Parameters ---------------------
@@ -34,7 +34,6 @@ Parameters = {
     "K": NUM_OF_USERS,
     "M": NUM_OF_TARGETS,
     "N": NUM_OF_ANTENNAS,
-    "Delta_d": SPACING,
     "L": FRAME_LENGTH,
     "spacing": SPACING,
     "P": POWER,
